@@ -1,0 +1,41 @@
+sudo service mysql start;
+mysql -u root -p
+create database nauka;
+	show databases;
+	use nauka;
+show tables;
+create table pracownicy(id int auto_incremment, imie varchar(20), nazwisko varchar(20), dzial int, zarobki int, primary key (id));
+	show tables;
+	desc pracownicy;
+	insert into pracownicy values (null,'jan', 'kowalski', 1, 2500);
+		/*mozemy dodac nastepnego pracownika*/
+		insert into pracownicy values (null,'adam', 'nowak', 1, 2500);
+			select * from pracownicy;
+			select imie, nazwisko from pracownicy;
+			select from pracownicy where imie = 'jan' nazwisko = 'kowalski' 
+			update pracownicy sel dzial= 2 where id =3;
+				select from pracownicy where zarobki > 2000;
+				select sum(zarobki)  form pracownicy;
+				select  sum(zarbki) as ile from pracownicy;
+				select count(1) from pracownicy;
+				delete from pracownicy where id = 3;
+					create table dzial;
+						insert into dzial values(1,'marketing');
+							insert into dzial values(2, "ryzyko");
+								select * from pracownicy;
+								select * from dzial;
+								select imie , nazwsko from pracownicy where imie like 
+								'%a';
+								select imie nazwisko from pracownicy where id = 4 or id = 6;
+								select from pracownicy where zarobki between 100 and 300;
+								select * from pracownicy where id  in (2,4,8);
+								select * from dni order by();
+
+
+
+								create table dzial_1 as select from pracownicy where dzial = 1;
+									create vivev dzial2 as select id , imie, nazwisko, zarobki, from pracownicy;
+										update dzial2 set zarobki =463 where id =5;
+											
+
+
