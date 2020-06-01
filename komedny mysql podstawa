@@ -4,7 +4,7 @@ create database nauka;
 	show databases;
 	use nauka;
 show tables;
-create table pracownicy(id int auto_incremment, imie varchar(20), nazwisko varchar(20), dzial int, zarobki int, primary key (id));
+create table pracownicy(id int auto_increment, imie varchar(20), nazwisko varchar(20), dzial int, zarobki int, primary key (id));
 	show tables;
 	desc pracownicy;
 	insert into pracownicy values (null,'jan', 'kowalski', 1, 2500);
